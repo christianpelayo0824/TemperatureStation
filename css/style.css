@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'VarelaRound';
+    src: url('../fonts/VarelaRound-Regular.ttf');
+}
+
+* {
+    font-family: 'VarelaRound';
+}
+
+body {
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+#main-section {
+    margin-top: 20px;
+}
+
+#side-panel {
+    background-color: #fafafa;
+    height: 600px;
+}
+
+#main-panel {
+    background-color: #fafafa;
+    height: 600px;
+}
+
+/* SideBar */
+
+#button-wrapper > a{
+    width: 100%;
+    border-radius: 0;
+    height: 60px;
+    background-color: #fafafa;
+    color: #2196F3;
+    border: none;
+}
+
+#button-wrapper > a:hover {
+    background-color: #2196F3;
+    color: #fafafa;
+}
+
+#button-wrapper > a > p{
+    padding-top: 13px;    
+}
+
+/* Button Label */
+#first {
+    padding-right: 80px;
+}
+
+#second {
+    padding-right: 95px;
+}
+
+#third {
+    padding-right: 100px;
+}
+
+#fourth {
+    padding-right: 87px;
+}
+
+
+#button-wrapper {
+    margin-bottom: 100px;
+}
