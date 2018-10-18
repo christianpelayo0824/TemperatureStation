@@ -13,10 +13,4 @@ mainApp.config(['$routeProvider', function ($routeProvider) {
     otherwise({
         redirectTo: '/dashboard'
     });
-/*
-    $routeProvider.html5Mode({
-        enable: true,
-        requireBase: false
-    });
-    */
 }]);

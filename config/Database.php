@@ -20,9 +20,9 @@ class Database {
                     $this->DB_PASS
                 );
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo 'Connection Establish!';
+            //echo 'Connection Establish!';
         }catch(PDOException $e){
-            echo 'Connection Error: ' .$e-getMessage(); 
+            //echo 'Connection Error: ' .$e-getMessage(); 
         }
         return $this->conn;
     }
