@@ -28,7 +28,7 @@ body {
 
 /* SideBar */
 
-#button-wrapper > a{
+#button-wrapper>a {
     width: 100%;
     border-radius: 0;
     height: 60px;
@@ -37,13 +37,13 @@ body {
     border: none;
 }
 
-#button-wrapper > a:hover {
+#button-wrapper>a:hover {
     background-color: #2196F3;
     color: #fafafa;
 }
 
-#button-wrapper > a > p{
-    padding-top: 13px;    
+#button-wrapper>a>p {
+    padding-top: 13px;
 }
 
 /* Button Label */
@@ -66,4 +66,13 @@ body {
 
 #button-wrapper {
     margin-bottom: 100px;
+}
+
+
+/* Database */
+#table-wrapper {
+    display: block;
+    max-height: 480px;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }

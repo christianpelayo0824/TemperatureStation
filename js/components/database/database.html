@@ -1,3 +1,24 @@
 <section ng-controller="DatabaseController">
     <h3>Database</h3>
+    <br>
+    <div id="table-wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Station</th>
+                    <th scope="col">Temperature</th>
+                    <th scope="col">Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="temp in temperature">
+                    <td>{{temp.id}}</td>
+                    <td>{{temp.station}}</td>
+                    <td>{{temp.temperature}}</td>
+                    <td>{{temp.timestamp}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
