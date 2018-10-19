@@ -9,6 +9,8 @@
                     <th scope="col">Station</th>
                     <th scope="col">Temperature</th>
                     <th scope="col">Timestamp</th>
+                    <th scope="col">Operation</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -17,6 +19,8 @@
                     <td>{{temp.station}}</td>
                     <td>{{temp.temperature}}</td>
                     <td>{{temp.timestamp}}</td>
+                    <td><button class="btn btn-success">UPDATE</button> | <button class="btn btn-warning" ng-click="deleteTempById(temp.id)">DELETE</button></td>
+
                 </tr>
             </tbody>
         </table>

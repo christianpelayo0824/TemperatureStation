@@ -33,9 +33,6 @@ class Temperature {
         $this->station = htmlspecialchars(strip_tags($this->station));
         $this->temperature = htmlspecialchars(strip_tags($this->temperature));
 
-        echo $this->station;
-        echo $this->temperature;
-
         $stmt->bindParam(':station', $this->station);
         $stmt->bindParam(':temperature', $this->temperature);
 
@@ -47,5 +44,17 @@ class Temperature {
 
     public function getTempById() {
         
+    }
+
+    public function deleteTempById() {
+        $query = "DELETE FROM temperature WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $this->id = htmlspecialchars(strip_tags($this->id));
+        $stmt->bindParam(':id', $this->id);
+
+        if($stmt->execute()) {
+            return true;
+        }
+        return false;
     }
 }

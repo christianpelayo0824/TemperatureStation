@@ -19,11 +19,14 @@ body {
 #side-panel {
     background-color: #fafafa;
     height: 600px;
+    border: 2px solid rgb(100, 181, 246);
 }
 
 #main-panel {
     background-color: #fafafa;
     height: 600px;
+    border: 2px solid rgb(100, 181, 246);
+
 }
 
 /* SideBar */
@@ -42,8 +45,28 @@ body {
     color: #fafafa;
 }
 
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
 #button-wrapper>a>p {
     padding-top: 13px;
+}
+
+#button-wrapper>a>p>span {
+    margin-right: 13px;
+}
+
+.img-wrapper {
+    margin-top: 30px;
+    margin-bottom: 35px;
+
+}
+
+#img-user {
+    height: 120px;
 }
 
 /* Button Label */
@@ -75,4 +98,9 @@ body {
     max-height: 480px;
     overflow-y: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* Dashboard */
+#canvas-wrapper {
+    margin-top: 100px;
 }
