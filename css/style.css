@@ -20,12 +20,14 @@ body {
     background-color: #fafafa;
     height: 600px;
     border: 2px solid rgb(100, 181, 246);
+    border-radius: 10px;
 }
 
 #main-panel {
     background-color: #fafafa;
     height: 600px;
     border: 2px solid rgb(100, 181, 246);
+    border-radius: 10px;
 
 }
 
