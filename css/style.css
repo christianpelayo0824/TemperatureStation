@@ -102,6 +102,11 @@ body {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+#md-header {
+    background-color: #2196F3 !important;
+    color: white;
+}
+
 /* Dashboard */
 #canvas-wrapper {
     margin-top: 100px;

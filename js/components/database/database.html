@@ -19,10 +19,46 @@
                     <td>{{temp.station}}</td>
                     <td>{{temp.temperature}}</td>
                     <td>{{temp.timestamp}}</td>
-                    <td><button class="btn btn-success">UPDATE</button> | <button class="btn btn-warning" ng-click="deleteTempById(temp.id)">DELETE</button></td>
-
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+                            ng-click="getTempById(temp.id)">UPDATE</button>
+                        | <button class="btn btn-warning" ng-click="deleteTempById(temp.id)">DELETE</button></td>
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" id="md-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Update Data</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <label for="#id">ID*</label>
+                        <input type="text" class="form-control" id="id" ng-model="temp.data.id" readonly>
+                        <br>
+                        <label for="#station">Station*</label>
+                        <input type="text" class="form-control" id="station" ng-model="temp.data.station">
+                        <br>
+                        <label for="#temperature">Temperature*</label>
+                        <input type="text" class="form-control" id="temperature" ng-model="temp.data.temperature">
+                        <br>
+                        <label for="#datetime">Datetime*</label>
+                        <input type="text" class="form-control" id="datetime" ng-model="temp.data.timestamp" readonly>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-click="updateTemp(temp)" data-dismiss="modal">Save
+                        changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
