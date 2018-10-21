@@ -16,7 +16,7 @@ body {
 #separator-hr {
     background-color: white;
     border-color: #cfd8dc;
-    
+
 }
 
 #main-section {
@@ -124,10 +124,40 @@ body {
 }
 
 
-
 /* Dashboard */
+
+
+.tech-first-box > img{
+    margin-top: 35px;
+    height: 30px;
+    border-radius: 100px;
+}
+
 #canvas-wrapper {
-    margin-top: 100px;
+    margin-top: 10px;
+}
+
+#tech-wrapper {
+    margin-top: 10px;
+    color: white;
+    border-left: 2px solid #ff9800;
+    height: 100px;
+    background-color: #455a64;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#datetime-wrapper {
+    margin-top: 10px;
+    color: white;
+    border-left: 2px solid #4caf50;
+    height: 100px;
+    background-color: #455a64;
+}
+
+#datetime-wrapper>h4 {
+    padding-top: 35px;
+    padding-left: 15px;
 }
 
 /* Developer */

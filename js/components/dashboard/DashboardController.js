@@ -4,8 +4,6 @@ mainApp.controller('DashboardController', function ($scope, TemperatureService, 
         $interval(function () {
             TemperatureService.getAllTemperature()
                 .then(function (response) {
-
-
                     var labels = response.data.data.map(function (e) {
                         if (e == null) {
                             console.log("HIT")
@@ -33,7 +31,7 @@ mainApp.controller('DashboardController', function ($scope, TemperatureService, 
                             legend: {
                                 labels: {
                                     fontColor: 'rgb(255,255,255)'
-                                } 
+                                }
                             },
                             scales: {
                                 yAxes: [{
@@ -64,11 +62,20 @@ mainApp.controller('DashboardController', function ($scope, TemperatureService, 
                             }
                         }
                     });
-
                 });
         }, 5000)
 
     }
 
+    getDateTime = function () {
+        $interval(function () {
+            var d = new Date();
+            $scope.date = d.toLocaleString();
+        }, 1000)
+    }
+
+    getDateTime();
     showChart();
+
+
 })

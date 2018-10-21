@@ -1,5 +1,44 @@
 <section ng-controller="DashboardController">
     <h3 class="title-section">Dashboard</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div id="time-wrapper">
+                    <div id="datetime-wrapper">
+                        <h4 id="date">{{date}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 ">
+                <center>
+                    <div id="tech-wrapper">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="tech-first-box">
+                                    <img src="img/angular.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="tech-first-box">
+                                    <img src="img/php-logo-flat.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="tech-first-box">
+                                    <img src="img/mysql-card.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="tech-first-box">
+                                    <img src="img/html.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
     <div id="canvas-wrapper">
         <canvas id="chart"></canvas>
     </div>
