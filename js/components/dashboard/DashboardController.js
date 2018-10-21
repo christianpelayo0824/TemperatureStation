@@ -5,11 +5,11 @@ mainApp.controller('DashboardController', function ($scope, TemperatureService, 
             TemperatureService.getAllTemperature()
                 .then(function (response) {
 
-                    
+
                     var labels = response.data.data.map(function (e) {
-                        if(e == null) {
+                        if (e == null) {
                             console.log("HIT")
-                        }else {
+                        } else {
                             return e.temperature;
                         }
                     });
@@ -23,24 +23,41 @@ mainApp.controller('DashboardController', function ($scope, TemperatureService, 
                             labels: labels,
                             datasets: [{
                                 label: 'Temperature',
+                                borderColor: 'rgb(255,255,255)',
+                                borderWidth: 2,
                                 data: data,
-                                backgroundColor: 'rgba(233,30,99, 0.3)'
+                                backgroundColor: 'rgba(255,87,34, 0.8)'
                             }]
                         },
                         options: {
+                            legend: {
+                                labels: {
+                                    fontColor: 'rgb(255,255,255)'
+                                } 
+                            },
                             scales: {
                                 yAxes: [{
                                     ticks: {
+                                        fontColor: 'rgb(255,255,255)',
                                         suggestedMin: 25,
                                         suggestedMax: 40,
                                         stepSize: 5
+                                    },
+                                    gridLines: {
+                                        color: 'rgba(255,255,255)',
+                                        lineWidth: 1
                                     }
                                 }],
                                 xAxes: [{
                                     ticks: {
+                                        fontColor: 'rgb(255,255,255)',
                                         min: 0,
                                         stepSize: 2,
                                         max: 10 - 4
+                                    },
+                                    gridLines: {
+                                        color: 'rgba(255,255,255)',
+                                        lineWidth: 1
                                     }
                                 }]
 
