@@ -10,6 +10,13 @@ mainApp.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'js/components/database/database.html',
         controller: 'DatabaseController'
     }).
+    when('/developer', {
+        templateUrl: 'js/components/developer/developer.html'
+    }).
+    when('/appliance', {
+        templateUrl: 'js/components/appliance/appliance.html',
+        controller: 'ApplianceController'
+    }).
     otherwise({
         redirectTo: '/dashboard'
     });

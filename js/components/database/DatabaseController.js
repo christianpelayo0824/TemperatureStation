@@ -1,6 +1,5 @@
 mainApp.controller('DatabaseController', function ($scope, TemperatureService, $interval) {
 
-
     $scope.getTempById = function (id) {
         console.log('hit');
         TemperatureService.getTempById(id)
@@ -11,21 +10,24 @@ mainApp.controller('DatabaseController', function ($scope, TemperatureService, $
             })
     }
 
-    $scope.updateTemp = function(object) {
+
+    $scope.updateTemp = function (object) {
         console.log(object.data);
         TemperatureService.updateTemp(object)
-            .then(function(response){
+            .then(function (response) {
                 console.log(response.status);
             })
     }
 
-    $scope.deleteTempById = function (id) {
-        console.log(id);
-        TemperatureService.deleteTempById(id)
+
+    $scope.deleteTempById = function (object) {
+        console.log(object);
+        TemperatureService.deleteTempById(object.data.id)
             .then(function (response) {
                 console.log(response.data);
                 $scope.temperature.splice($scope.temperature, 1);
             })
+
     }
 
     getTemperature = function () {
