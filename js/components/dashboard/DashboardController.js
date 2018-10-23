@@ -37,7 +37,7 @@ mainApp.controller('DashboardController', function ($scope, TemperatureService, 
                                 yAxes: [{
                                     ticks: {
                                         fontColor: 'rgb(255,255,255)',
-                                        suggestedMin: 25,
+                                        suggestedMin: 15,
                                         suggestedMax: 40,
                                         stepSize: 5
                                     },
